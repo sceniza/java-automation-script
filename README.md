@@ -1,4 +1,4 @@
-#A Simple Functional and API Testing Scripts for your Project
+# A Simple Functional and API Testing Scripts for your Project
 
 ## Test scenario includes:
     1. Login Functionality
