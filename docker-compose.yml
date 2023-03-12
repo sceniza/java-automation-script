@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  automation-tests:
+    build:
+      context: ./
+    command: "tail -f /dev/null"
+    depends_on:
+      - webdrivermanager
+      - Chrome
+
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./target:/app/target
+      - ./run-maven.sh:/app/run-maven.sh
+      - ./build.sh:/app/build.sh
+      - ./entrypoint.sh:/app/entrypoint.sh
+      - ./bin:/app/bin
+      - ./drivers:/app/drivers
+    environment:
+      - JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps=
+
+  webdrivermanager:
+    image: bonigarcia/webdrivermanager:5.1.0
