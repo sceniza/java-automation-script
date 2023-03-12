@@ -2,7 +2,7 @@
 
 ## Test scenario includes:
     1. Login Functionality
-    2. Cart Functionalit
+    2. Cart Functionality
     3. Simple API Post Request
 
 ## What to install
